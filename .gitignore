@@ -127,3 +127,7 @@ _modules/*
 
 # Front-End
 node_modules/*
+
+# Banco de dados
+writable/database/*
+!writable/database/.gitkeep
