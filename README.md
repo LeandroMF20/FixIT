@@ -1,69 +1,49 @@
-# CodeIgniter 4 Application Starter
+# FixIT
 
-## What is CodeIgniter?
+O FixIT é um projeto pessoal para portfólio, que tem como objetivo demonstrar os pontos-chave de tudo que aprendi e venho aprendendo desenvolvendo um sistema ERP de médio porte. Além disso, usarei este projeto para aprender novas tecnologias, entender melhor padrões de arquitetura de software e trabalhar melhor com conceitos de Clean Architecture, entre outros conceitos importantes na produção de softwares robustos e modernos.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Objetivos
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+O objetivo principal é pegar tudo que aprendi na prática e trazer para este projeto. Mas além disso, busco aprender mais sobre Front-End e uso de frameworks para reatividade de páginas.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Também tenho como objetivo buscar simplicidade, por isso a escolha do uso do servidor embutido no ambiente de desenvolvimento e o SQLite3 como escolha de banco de dados. Mais informações sobre essas escolhas estão no tópico abaixo, sobre as tecnologias utilizadas no projeto.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## Stack do projeto
 
-## Installation & updates
+- CodeIgniter 4 (com instalação via Composer)
+- Vite
+- Vue 3
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Estas tecnologias são só o stack inicial, onde o foco é o aprendizado e uso prático do Vue 3, usado de forma complementar à estrutura de views do CodeIgniter 4. Isso significa que futuramente irei implementar o uso de recursos como Axios, Tailwind CSS e outras tecnologias que fizerem sentido incluir no projeto.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## Pré-requisitos
+
+- PHP ^8.2
+- Composer
+- Node.js
+
+Além disso, certifique-se de que as seguintes extensões PHP estejam instaladas e ativas, em caso de erros ao rodar o `composer install`:
+
+- ext-intl
+- ext-mbstring
+- ext-ctype
+- ext-dom
+- ext-filter
+- ext-json
+- ext-libxml
+- ext-pcntl
+- ext-phar
+- ext-tokenizer
+- ext-xmlwriter
 
 ## Setup
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+A instalação atualmente é bem simples. Seguindo os passos abaixo, já é possível executar o projeto localmente:
 
-## Important Change with index.php
+```bash
+composer install
+npm install
+php spark migrate # Para criar o banco de dados e sua estrutura inicial
+```
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.2 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+No final de tudo, é possível executar o projeto usando o comando `npm run dev` na raiz do projeto.
