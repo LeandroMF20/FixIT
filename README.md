@@ -45,6 +45,7 @@ Além disso, certifique-se de que as seguintes extensões PHP estejam instaladas
 A instalação atualmente é bem simples. Seguindo os passos abaixo, já é possível executar o projeto localmente:
 
 ```bash
+git clone https://github.com/LeandroMF20/FixIT.git
 composer install
 npm install
 php spark migrate # Para criar o banco de dados e sua estrutura inicial
