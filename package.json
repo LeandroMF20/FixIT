@@ -1,0 +1,27 @@
+{
+  "name": "fixit",
+  "version": "1.0.0",
+  "description": "## What is CodeIgniter?",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "vue": "^3.5.42"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "concurrently": "^9.2.4",
+    "vite": "^8.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:spark": "php spark serve",
+    "dev:vite": "vite build --watch",
+    "dev": "concurrently -n spark,vite -c blue,green \"npm:dev:spark\" \"npm:dev:vite\"",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
